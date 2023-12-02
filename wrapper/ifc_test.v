@@ -28,17 +28,17 @@ output b_rdy;
 input y_en;
 output y_data,y_rdy;
 
-	ifc_or dut(.CLK(CLK),
-		   .RST_N(RST_N),
-		   .a_data(a_data),
-		   .a_en(a_en),
-		   .a_rdy(a_en),
-		   .b_data(a_en),
-		   .b_en(a_en),
-		   .b_rdy(a_en),
-		   .y_data(a_en),
-		   .y_en(a_en),
-		   .y_rdy(a_en));
+ifc_or dut(CLK,
+	       RST_N,
+	       a_data,
+	       a_en,
+	       a_rdy,
+	       b_data,
+	       b_en,
+	       b_rdy,
+	       y_en,
+	       y_data,
+	       y_rdy);
 	       
 	       initial begin
 	       		$dumpfile("ifc.vcd");
